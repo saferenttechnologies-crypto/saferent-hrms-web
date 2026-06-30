@@ -1,3 +1,4 @@
-USE saferent_hrms;
+-- Run this file after selecting the target database in your MySQL client.
+-- On shared hosting, the database is usually created for you and USE may be denied.
 INSERT INTO roles(name,slug,is_system) VALUES ('Super Admin','super-admin',1),('Admin','admin',1),('HR Manager','hr-manager',1),('HR Recruiter','hr-recruiter',1),('Manager','manager',1),('Team Lead','team-lead',1),('Employee','employee',1),('Intern','intern',1),('Viewer','viewer',1),('Guest','guest',1);
 INSERT INTO permissions(module,name,slug) VALUES ('employees','Create Employee','employees.create'),('employees','Edit Employee','employees.edit'),('employees','Delete Employee','employees.delete'),('letters','Generate Letters','letters.generate'),('payroll','Manage Payroll','payroll.manage'),('attendance','Manage Attendance','attendance.manage'),('reports','View Reports','reports.view'),('settings','Manage Settings','settings.manage'),('documents','Manage Documents','documents.manage'),('recruitment','Manage Recruitment','recruitment.manage');

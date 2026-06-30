@@ -1,5 +1,5 @@
-CREATE DATABASE IF NOT EXISTS saferent_hrms CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-USE saferent_hrms;
+-- Run this file after selecting the target database in your MySQL client.
+-- On shared hosting, the database is usually created for you and CREATE DATABASE/USE may be denied.
 
 CREATE TABLE roles (id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY, name VARCHAR(80) NOT NULL UNIQUE, slug VARCHAR(100) NOT NULL UNIQUE, description TEXT, is_system TINYINT(1) DEFAULT 0, created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP, updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP) ENGINE=InnoDB;
 CREATE TABLE permissions (id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY, module VARCHAR(80) NOT NULL, name VARCHAR(120) NOT NULL, slug VARCHAR(140) NOT NULL UNIQUE, description TEXT, created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP, INDEX idx_permissions_module(module)) ENGINE=InnoDB;
