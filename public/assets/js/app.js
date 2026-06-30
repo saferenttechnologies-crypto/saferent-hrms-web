@@ -1,0 +1,2 @@
+document.getElementById('themeToggle')?.addEventListener('click',()=>{const root=document.documentElement;root.dataset.bsTheme=root.dataset.bsTheme==='dark'?'light':'dark'});
+const canvas=document.getElementById('hiringChart');if(canvas){new Chart(canvas,{type:'line',data:{labels:['Jan','Feb','Mar','Apr','May','Jun'],datasets:[{label:'Hiring',data:[12,19,15,24,31,28],borderColor:'#FF6D2E',tension:.4},{label:'Attendance %',data:[91,93,92,95,94,96],borderColor:'#344054',tension:.4}]},options:{responsive:true,plugins:{legend:{position:'bottom'}}}})}
